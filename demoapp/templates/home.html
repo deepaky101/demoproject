@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div>
+    <h1>This is Home</h1>
+
+    <div>
+        {% for product in products %}
+        
+        <div>
+            {% if product.image %}
+            <img src="{{product.image.url}}" alt="">
+            {% endif %}
+            <h3>{{product.title}}</h3>
+        </div>
+
+        {% empty %}
+        
+        <p>No product yet!</p>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

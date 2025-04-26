@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/layout.css?{% now "U" %}">
+    <title>demo</title>
+</head>
+<body>
+    <header>Header 
+        <a href="{% url "home" %}">home</a>
+        <a href="{% url "form" %}">form</a>
+    </header>
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+    <footer>Footer</footer>
+</body>
+</html>
